@@ -28,16 +28,14 @@ productRouter.get("/",asyncHandler(
     }
 ))
 //admin get all products
-productRouter.get(
-  "/all",
-  protect,
-  admin,
-  asyncHandler(async (req, res) => {
-    const products = await Product.find({}).sort({ _id: -1 });
-    res.json(products);
-  })
-);
-
+productRouter.get("/all",
+protect,
+admin, 
+asyncHandler(async(req,res)=>{
+  const products=await Product.find({})
+  res.json(products)
+})
+)
   //get single product
 productRouter.get("/:id",asyncHandler(
     async(req,res)=>{

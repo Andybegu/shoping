@@ -12,8 +12,8 @@ const OrderDetailInfo = (props) => {
           <div className="text">
             <h6 className="mb-1">Customer</h6>
             <p className="mb-1">
-              {order.user.name} <br />
-              <a href={`mailto:${order.user.email}`}>{order.user.email}</a>
+              {order.user?.name} <br />
+              <a href={`mailto:${order.user?.email}`}>{order.user?.email}</a>
             </p>
           </div>
         </article>
